@@ -1,0 +1,62 @@
+{
+  "machine": {
+    "platform": "macOS-26.4.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.9.6",
+    "note": "single process, single thread"
+  },
+  "transition_matrix": {
+    "pairs_exercised": 9,
+    "pairs_total": 9,
+    "legal": 4,
+    "illegal": 5,
+    "matches_declared_matrix": true,
+    "matrix": {
+      "ACTIVE:suspend": "SUSPENDED",
+      "ACTIVE:resume": "ILLEGAL",
+      "ACTIVE:delete": "DELETED",
+      "SUSPENDED:suspend": "ILLEGAL",
+      "SUSPENDED:resume": "ACTIVE",
+      "SUSPENDED:delete": "DELETED",
+      "DELETED:suspend": "ILLEGAL",
+      "DELETED:resume": "ILLEGAL",
+      "DELETED:delete": "ILLEGAL"
+    }
+  },
+  "oracle_agreement": {
+    "seed": 42,
+    "events": 1000000,
+    "auth_requests": 997021,
+    "lifecycle_events": 2979,
+    "oracle_mismatches": 0,
+    "reason_counts": {
+      "APPROVED": 485041,
+      "BAD_CRYPTOGRAM": 5861,
+      "DAILY_CAP_EXCEEDED": 31073,
+      "DEVICE_MISMATCH": 4248,
+      "GEO_BLOCKED": 13768,
+      "MCC_BLOCKED": 9444,
+      "MERCHANT_MISMATCH": 2120,
+      "MONTHLY_CAP_EXCEEDED": 229833,
+      "TOKEN_NOT_ACTIVE": 152803,
+      "TOKEN_UNKNOWN": 1974,
+      "TXN_CAP_EXCEEDED": 60856
+    },
+    "wall_seconds_engine_plus_oracle": 9.298
+  },
+  "latency": {
+    "sampled_auths": 249230,
+    "p50_us": 1.334,
+    "p90_us": 1.75,
+    "p99_us": 2.333,
+    "max_us": 6107.042,
+    "mean_us": 1.403,
+    "auths_per_sec_from_summed_latency": 712606
+  },
+  "throughput": {
+    "events": 1000000,
+    "auth_requests": 997021,
+    "wall_seconds_including_stream_generation": 3.675,
+    "end_to_end_events_per_sec": 272073
+  }
+}
